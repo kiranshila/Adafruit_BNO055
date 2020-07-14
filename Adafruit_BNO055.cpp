@@ -76,9 +76,6 @@ bool Adafruit_BNO055::begin(adafruit_bno055_opmode_t mode) {
   _address = BNO055_ADDRESS_B;
 #endif
 
-  /* Enable I2C */
-  _wire->begin();
-
   // BNO055 clock stretches for 500us or more!
 #ifdef ESP8266
   _wire->setClockStretchLimit(1000); // Allow for 1000us of clock stretching
